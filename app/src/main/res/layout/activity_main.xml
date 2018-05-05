@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/bloomBackground">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <ImageView
+        android:id="@+id/bloomwalls_icon"
+        android:layout_width="220dp"
+        android:layout_height="53.5dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bloomwalls"
+        android:layout_marginTop="41.5dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="There Will Be Text"
+        android:layout_below="@+id/bloomwalls_icon"
+        android:textColor="@color/bloomWhite"
+        android:id="@+id/txt1"
+        android:layout_marginTop="15.5dp"
+        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt2"
+        android:layout_below="@+id/txt1"
+        android:layout_marginTop="281dp"
+        android:text="There Will be text"
+        android:textColor="@color/bloomWhite"
+        android:layout_centerHorizontal="true"/>
+
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/indicator"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_alignParentBottom="false"
+        android:layout_centerInParent="true"
+        app:tabBackground="@drawable/indicator_selector"
+        app:tabGravity="center"
+        app:tabIndicatorHeight="0dp"
+        android:layout_below="@+id/txt2"
+        android:layout_marginTop="22dp"/>
+
+    <Button
+        android:layout_width="315dp"
+        android:layout_height="50dp"
+        android:id="@+id/create_account_btn"
+        android:text="Create Account"
+        android:layout_below="@id/indicator"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/create_account_button_style"
+        android:textAllCaps="false"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/linear1"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/create_account_btn"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt3"
+            android:text="@string/already_have_an_account"
+            android:textColor="@color/bloomWhite"
+            />
+
+            <Button
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="Login"
+                android:background="@color/bloomBackground"
+                android:textColor="@color/bloomWhite"
+                android:textAllCaps="false"
+                android:id="@+id/login_link_btn"
+                />
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="34dp"
+        android:layout_height="1dp"
+        android:background="@color/bloomWhite"
+        android:layout_below="@id/linear1"
+        android:layout_marginStart="243dp"
+        >
+
+    </View>
+
+
+
+</RelativeLayout>

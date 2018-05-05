@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Bloomwalls</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="create_account">Create Account</string>
+    <string name="err_msg_phone">Enter valid phone number</string>
+    <string name="err_msg_email">Enter valid email address</string>
+    <string name="err_msg_password">Enter the password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_password">Password</string>
+    <string name="login">Login</string>
+    <string name="country">Country</string>
+    <string name="last_name">Last name</string>
+    <string name="first_name">First name</string>
+    <string name="personal_information">Personal information</string>
+    <string name="city">City</string>
+    <string name="finish">Finish</string>
+
+    <string-array name="gmt_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Jupiter</item>
+        <item>Saturn</item>
+        <item>Uranus</item>
+        <item>Neptune</item>
+    </string-array>
+
+
+
+
+</resources>
