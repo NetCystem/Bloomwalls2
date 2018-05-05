@@ -15,6 +15,10 @@
     <string name="personal_information">Personal information</string>
     <string name="city">City</string>
     <string name="finish">Finish</string>
+    <string name="verification">Verification</string>
+    <string name="choose_your_code_input_method">Choose your code input method</string>
+    <string name="code">Code</string>
+    <string name="next">Next</string>
 
     <string-array name="gmt_array">
         <item>Mercury</item>
@@ -26,8 +30,6 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
-
-
 
 
 </resources>

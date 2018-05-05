@@ -1,5 +1,6 @@
 package com.example.macbook.bloomwalls;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.graphics.Typeface;
 import android.support.design.widget.TextInputLayout;
@@ -67,6 +68,13 @@ public class SignupActivity extends AppCompatActivity {
         signupLoginLink.setPaintFlags(signupLoginLink.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
         signupLoginLink.setLineSpacing(0.0f, 1.1f);
         signupLoginLink.setMovementMethod(LinkMovementMethod.getInstance());
+
+        signupCreateAccountBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignupActivity.this, VerificationActivity.class));
+            }
+        });
 
 
 
