@@ -46,7 +46,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginStart="30dp"
         android:text="@string/choose_your_code_input_method"
-        android:textColor="#FF010101"
+        android:textColor="#9A9A9A"
         android:textSize="15sp"/>
 
     <LinearLayout

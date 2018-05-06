@@ -19,6 +19,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.macbook.bloomwalls.Utils.Fonts;
+
 public class SignupActivity extends AppCompatActivity {
 
     private ImageButton signupFormBackBtn;
@@ -26,7 +28,7 @@ public class SignupActivity extends AppCompatActivity {
     private TextInputLayout signupEmail, signupPhoneNumber, signupPassword;
     private EditText signupInputEmail, signupInputPhoneNumber, signupInputPassword;
     private Button signupCreateAccountBtn;
-    private Typeface tpfRegular, tpfBold;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,35 +38,31 @@ public class SignupActivity extends AppCompatActivity {
         String termsOfService = "By clicking ''Create Account'' I agree to BloomWalls <u>Terms of Service</u>";
 
 
-        tpfRegular = Typeface.createFromAsset(getAssets(),
-                "fonts/sf_ui_display_regular.otf");
-        tpfBold = Typeface.createFromAsset(getAssets(),
-                "fonts/sf_ui_display_bold.otf");
 
         signupFormBackBtn = findViewById(R.id.back_btn3);
         signupToWork = findViewById(R.id.signup_to_work);
-        signupToWork.setTypeface(tpfBold);
+        signupToWork.setTypeface(Fonts.getTpfBold(this));
         signupEmail = findViewById(R.id.signup_email);
-        signupEmail.setTypeface(tpfBold);
+        signupEmail.setTypeface(Fonts.getTpfBold(this));
         signupPhoneNumber = findViewById(R.id.signup_phone_number);
-        signupPhoneNumber.setTypeface(tpfBold);
+        signupPhoneNumber.setTypeface(Fonts.getTpfBold(this));
         signupPassword = findViewById(R.id.signup_password);
-        signupPassword.setTypeface(tpfBold);
+        signupPassword.setTypeface(Fonts.getTpfBold(this));
         signupInputEmail = findViewById(R.id.signup_input_email);
-        signupInputEmail.setTypeface(tpfBold);
+        signupInputEmail.setTypeface(Fonts.getTpfBold(this));
         signupInputPhoneNumber = findViewById(R.id.signup_input_phone_number);
-        signupInputPhoneNumber.setTypeface(tpfBold);
+        signupInputPhoneNumber.setTypeface(Fonts.getTpfBold(this));
         signupInputPassword = findViewById(R.id.signup_input_password);
-        signupInputPassword.setTypeface(tpfBold);
+        signupInputPassword.setTypeface(Fonts.getTpfBold(this));
         signupCreateAccountBtn = findViewById(R.id.signup_create_account_btn);
-        signupCreateAccountBtn.setTypeface(tpfBold);
+        signupCreateAccountBtn.setTypeface(Fonts.getTpfBold(this));
         signupTermsOfService = findViewById(R.id.signup_terms_of_service);
         signupTermsOfService.setText(Html.fromHtml(termsOfService));
-        signupTermsOfService.setTypeface(tpfRegular);
+        signupTermsOfService.setTypeface(Fonts.getTpfRegular(this));
         signupAccountAvailibility = findViewById(R.id.signup_acount_availibility);
-        signupAccountAvailibility.setTypeface(tpfRegular);
+        signupAccountAvailibility.setTypeface(Fonts.getTpfRegular(this));
         signupLoginLink = findViewById(R.id.signup_login_link);
-        signupLoginLink.setTypeface(tpfBold);
+        signupLoginLink.setTypeface(Fonts.getTpfRegular(this));
         signupLoginLink.setPaintFlags(signupLoginLink.getPaintFlags()| Paint.UNDERLINE_TEXT_FLAG);
         signupLoginLink.setLineSpacing(0.0f, 1.1f);
         signupLoginLink.setMovementMethod(LinkMovementMethod.getInstance());
