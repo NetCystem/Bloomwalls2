@@ -19,6 +19,8 @@
     <string name="choose_your_code_input_method">Choose your code input method</string>
     <string name="code">Code</string>
     <string name="next">Next</string>
+    <string name="email">Email</string>
+    <string name="sms">SMS</string>
 
     <string-array name="gmt_array">
         <item>Mercury</item>
