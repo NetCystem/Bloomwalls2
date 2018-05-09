@@ -7,10 +7,10 @@
         android:startColor="@color/bloomWhite"
         android:useLevel="false" />
 
-    <corners android:bottomLeftRadius="17dp"
-        android:bottomRightRadius="17dp"
-        android:topLeftRadius="17dp"
-        android:topRightRadius="17dp"
+    <corners android:bottomLeftRadius="18dp"
+        android:bottomRightRadius="18dp"
+        android:topLeftRadius="18dp"
+        android:topRightRadius="18dp"
         />
 
     <solid android:color="#FFFFFF" />

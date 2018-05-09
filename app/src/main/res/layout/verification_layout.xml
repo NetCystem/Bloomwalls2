@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bloomWhite">
 
     <ImageButton
         android:id="@+id/back_btn5"
         android:layout_width="12.5dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:layout_height="21.6dp"
+        android:layout_marginStart="8.64dp"
+        android:layout_marginTop="29.8dp"
         android:background="@color/bloomWhite"
         android:scaleType="fitCenter"
         android:src="@drawable/back" />
@@ -18,11 +19,14 @@
         android:id="@+id/forgot_password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="261dp"
-        android:layout_marginTop="9.5dp"
+        android:layout_marginTop="34.56dp"
+        android:layout_marginEnd="20.6dp"
         android:text="Forgot Passwrd?"
+        android:layout_alignParentEnd="true"
         android:textColor="@color/colorBlack"
-        android:textSize="12sp" />
+        android:textSize="11.5sp"
+        android:gravity="center_horizontal"
+        android:lineSpacingExtra="-1.44sp"/>
 
     <TextView
 
@@ -30,11 +34,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/back_btn5"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="14dp"
+        android:layout_marginStart="28.3dp"
+        android:layout_marginTop="12.96dp"
         android:text="@string/verification"
         android:textColor="@color/colorBlack"
-        android:textSize="25sp" />
+        android:textSize="24sp"
+        android:gravity="center_horizontal"/>
 
     <TextView
 
@@ -42,55 +47,58 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/verification"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="28.8dp"
+        android:layout_marginTop="11.5dp"
         android:text="@string/choose_your_code_input_method"
-        android:textColor="#9A9A9A"
-        android:textSize="15sp" />
+        android:textColor="#b3010101"
+        android:textSize="14.4sp" />
 
     <LinearLayout
-        android:id="@+id/linear_verification"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="315dp"
+        android:layout_height="100dp"
         android:layout_below="@+id/code_input_method"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25.5dp"
-        android:orientation="horizontal">
+        android:layout_marginTop="24.5dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:id="@+id/linear_verification">
 
         <Button
             android:id="@+id/verification_email"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
+            android:layout_width="144dp"
+            android:layout_height="96dp"
             android:background="@drawable/button_style2"
-            android:drawableStart="@drawable/email"
-            android:elevation="16dp"
-            android:scaleX="0.6"
-            android:scaleY="0.6"
             android:text="@string/email"
+            android:textSize="17.3sp"
+            android:lineSpacingExtra="-1.872sp"
+            android:translationZ="6dp"
+            android:elevation="6dp"
+            android:stateListAnimator="@null"
             android:textAllCaps="false"
-            android:textSize="18sp" />
+            />
 
         <Button
             android:id="@+id/verification_sms"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_marginStart="15dp"
+            android:layout_width="144dp"
+            android:layout_height="96dp"
             android:background="@drawable/button_style2"
-            android:drawableStart="@drawable/sms"
-            android:scaleX="0.6"
-            android:scaleY="0.6"
             android:text="@string/sms"
-            android:textSize="18sp" />
+            android:textSize="17.3sp"
+            android:lineSpacingExtra="-1.872sp"
+            android:layout_marginStart="21.6dp"
+            android:stateListAnimator="@null"
+            android:elevation="7dp"
+            android:translationZ="4dp"
+            />
 
     </LinearLayout>
 
     <EditText
         android:id="@+id/code_input"
-        android:layout_width="315dp"
+        android:layout_width="302.4dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/linear_verification"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="25dp"
         android:text="@string/code"
         android:textSize="15sp" />
@@ -98,37 +106,39 @@
 
     <Button
         android:id="@+id/button_next"
-        android:layout_width="315dp"
-        android:layout_height="50dp"
+        android:layout_width="302.4dp"
+        android:layout_height="48dp"
         android:layout_below="@+id/code_input"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45.5dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/button_style"
         android:text="@string/next"
+        android:textSize="17.3sp"
+        android:lineSpacingExtra="-1.872sp"
         android:textAllCaps="false" />
 
     <TextView
         android:id="@+id/resend_code_link"
-        android:layout_width="170dp"
-        android:layout_height="28.5dp"
+        android:layout_width="163dp"
+        android:layout_height="27.4dp"
         android:layout_below="@id/button_next"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="19dp"
         android:gravity="center"
         android:text="If you haven’t received the e-mail click Resend code"
         android:textColor="@color/colorBlack"
-        android:textSize="12sp" />
+        android:textSize="11.49sp" />
 
     <TextView
         android:id="@+id/verification_login_link"
         android:layout_width="168dp"
-        android:layout_height="14dp"
+        android:layout_height="17dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="44.5dp"
+        android:layout_marginBottom="42.7dp"
         android:gravity="center"
         android:text="Already have an account? Login"
         android:textColor="@color/colorBlack"
-        android:textSize="12sp" />
+        android:textSize="11.5sp" />
 
 </RelativeLayout>
