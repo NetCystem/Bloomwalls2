@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="34.56dp"
         android:layout_marginEnd="20.6dp"
-        android:text="Forgot Passwrd?"
+        android:text="Forgot Password?"
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorBlack"
         android:textSize="11.5sp"
@@ -54,42 +54,35 @@
         android:textSize="14.4sp" />
 
     <LinearLayout
+        android:id="@+id/linear_verification"
         android:layout_width="315dp"
         android:layout_height="100dp"
         android:layout_below="@+id/code_input_method"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24.5dp"
-        android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:id="@+id/linear_verification">
+        android:orientation="horizontal">
 
         <Button
             android:id="@+id/verification_email"
             android:layout_width="144dp"
             android:layout_height="96dp"
             android:background="@drawable/button_style2"
-            android:text="@string/email"
-            android:textSize="17.3sp"
+            android:drawableStart="@drawable/email"
             android:lineSpacingExtra="-1.872sp"
-            android:translationZ="6dp"
-            android:elevation="6dp"
-            android:stateListAnimator="@null"
+            android:text="@string/email"
             android:textAllCaps="false"
-            />
+            android:textSize="17.3sp" />
 
         <Button
             android:id="@+id/verification_sms"
-            android:layout_width="144dp"
+            android:layout_width="wrap_content"
             android:layout_height="96dp"
-            android:background="@drawable/button_style2"
-            android:text="@string/sms"
-            android:textSize="17.3sp"
-            android:lineSpacingExtra="-1.872sp"
             android:layout_marginStart="21.6dp"
-            android:stateListAnimator="@null"
-            android:elevation="7dp"
-            android:translationZ="4dp"
-            />
+            android:background="@drawable/button_style2"
+            android:lineSpacingExtra="-1.872sp"
+            android:text="@string/sms"
+            android:textSize="17.3sp" />
 
     </LinearLayout>
 
@@ -100,8 +93,16 @@
         android:layout_below="@id/linear_verification"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:text="@string/code"
-        android:textSize="15sp" />
+        android:hint="@string/code"
+        android:inputType="number"
+        android:textSize="14.4sp"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textColorHighlight="@color/colorBlack"
+
+
+        />
 
 
     <Button
@@ -115,7 +116,8 @@
         android:text="@string/next"
         android:textSize="17.3sp"
         android:lineSpacingExtra="-1.872sp"
-        android:textAllCaps="false" />
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"/>
 
     <TextView
         android:id="@+id/resend_code_link"
