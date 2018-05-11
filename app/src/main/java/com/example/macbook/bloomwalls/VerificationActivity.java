@@ -1,10 +1,13 @@
 package com.example.macbook.bloomwalls;
 
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.ScaleDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -41,11 +44,19 @@ public class VerificationActivity extends AppCompatActivity {
         resendCodeLink = findViewById(R.id.resend_code_link);
         verificationLoginLink = findViewById(R.id.verification_login_link);
         linearVerification = findViewById(R.id.linear_verification);
-        verificationEmail = findViewById(R.id.verification_email);
+//        verificationEmail = findViewById(R.id.verification_email);
         verificationSms = findViewById(R.id.verification_sms);
         next_button = findViewById(R.id.button_next);
         next_button.setTypeface(Fonts.getTpfBold(this));
         input_code = findViewById(R.id.code_input);
         input_code.setTypeface(Fonts.getTpfBold(this));
+        ImageView emailPic = findViewById(R.id.emailpic);
+        TextView emailtxt = findViewById(R.id.emailtxt);
+        emailtxt.setTypeface(Fonts.getTpfBold(this));
+
+        Drawable emailimg  = getResources().getDrawable(R.drawable.sms);
+//        emailimg.setBounds(0, 0, (int) (emailimg.getIntrinsicWidth()*0.1), (int) (emailimg.getIntrinsicHeight()*0.1));
+        ScaleDrawable scaledImg = new ScaleDrawable(emailimg, 0, 31,48);
+        verificationSms.setCompoundDrawables(scaledImg.getDrawable(), null, null, null);
     }
 }
