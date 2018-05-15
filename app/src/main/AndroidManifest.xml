@@ -14,10 +14,11 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
+                <data android:scheme="login" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".VerificationActivity"/>
+        <activity android:name=".Activities.SignupActivity" />
+        <activity android:name=".Activities.VerificationActivity"/>
     </application>
 
 </manifest>

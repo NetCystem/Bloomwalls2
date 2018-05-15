@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bloomWhite"
+    android:id="@+id/verification_main">
+
+    <ImageButton
+        android:id="@+id/account_type_back_btn"
+        android:layout_width="12.5dp"
+        android:layout_height="21.6dp"
+        android:layout_marginStart="8.64dp"
+        android:layout_marginTop="29.8dp"
+        android:background="@color/bloomWhite"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/account_type_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28.3dp"
+        android:layout_marginTop="65.232dp"
+        android:text="@string/account_type"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+
+        android:id="@+id/account_type_warning_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/account_type_txt"
+        android:layout_marginStart="28.8dp"
+        android:layout_marginTop="11.5dp"
+        android:text="@string/selected_type_is_not_to_be_changed"
+        android:textColor="@color/colorGrey"
+        android:textSize="14.4sp" />
+
+    <LinearLayout
+        android:id="@+id/linear_verification"
+        android:layout_width="304dp"
+        android:layout_height="272dp"
+        android:layout_marginTop="190dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+
+            android:layout_width="302.4dp"
+            android:layout_height="120dp"
+            app:cardCornerRadius="18dp"
+            android:elevation="25dp"
+            android:id="@+id/account_type_hire_card"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            >
+
+            <ImageView
+                android:id="@+id/account_type_hire_pic"
+                android:layout_width="75.3dp"
+                android:layout_height="50.8dp"
+                android:src="@drawable/hire"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20.2dp"
+                />
+
+            <TextView
+                android:id="@+id/account_type_hire_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/hire"
+                android:textSize="17.3sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:layout_marginStart="180dp"
+                />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="302.4dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="18dp"
+            android:elevation="25dp"
+            android:id="@+id/account_type_work_card"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/account_type_work_pic"
+                android:layout_width="75.3dp"
+                android:layout_height="50.8dp"
+                android:src="@drawable/work"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20.2dp"
+
+                />
+
+            <TextView
+                android:id="@+id/account_type_work_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/work"
+                android:textSize="17.3sp"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/colorBlack"
+                android:layout_marginStart="180dp"
+                />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/acount_type_login_txt"
+        android:layout_width="168dp"
+        android:layout_height="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42.7dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/colorBlack"
+        android:textSize="11.5sp" />
+
+</RelativeLayout>

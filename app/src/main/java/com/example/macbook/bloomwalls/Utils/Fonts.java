@@ -2,41 +2,45 @@ package com.example.macbook.bloomwalls.Utils;
 
 
 import android.content.Context;
+import android.graphics.Paint;
 import android.graphics.Typeface;
+import android.text.TextPaint;
 
 public class Fonts {
 
 
-   public static Typeface tpfRegular;
-   public static Typeface tpfBold;
+   public static Typeface tpf;
 
-    public Fonts(Typeface tpfRegular, Typeface tpfBold) {
+   Context context;
 
-        this.tpfRegular = tpfRegular;
-        this.tpfBold = tpfBold;
+    public Fonts(Typeface tpfBold) {
+
+
+        this.tpf = tpfBold;
 
     }
 
 
     public static Typeface getTpfRegular(Context context) {
 
-        tpfRegular = Typeface.createFromAsset(
+        tpf = Typeface.createFromAsset(
 
                 context.getAssets(),
                 "fonts/sf_ui_display_regular.otf");
 
-        return tpfRegular;
+        return tpf;
     }
 
 
     public static Typeface getTpfBold(Context context) {
 
-        tpfBold = Typeface.createFromAsset(
+        tpf = Typeface.createFromAsset(
 
                 context.getAssets(),
                 "fonts/sf_ui_display_bold.otf");
 
-        return tpfBold;
+        return tpf;
+
     }
 
 

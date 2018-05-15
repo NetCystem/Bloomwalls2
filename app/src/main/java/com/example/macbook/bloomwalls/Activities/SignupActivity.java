@@ -1,8 +1,7 @@
-package com.example.macbook.bloomwalls;
+package com.example.macbook.bloomwalls.Activities;
 
 import android.content.Intent;
 import android.graphics.Paint;
-import android.graphics.Typeface;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +18,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.macbook.bloomwalls.R;
 import com.example.macbook.bloomwalls.Utils.Fonts;
 
 public class SignupActivity extends AppCompatActivity {
@@ -33,7 +33,7 @@ public class SignupActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.signup_to_work_layout);
+        setContentView(R.layout.layout_signup_fragment);
 
         String termsOfService = "By clicking ''Create Account'' I agree to BloomWalls <u>Terms of Service</u>";
 
@@ -59,7 +59,6 @@ public class SignupActivity extends AppCompatActivity {
         signupTermsOfService = findViewById(R.id.signup_terms_of_service);
         signupTermsOfService.setText(Html.fromHtml(termsOfService));
         signupTermsOfService.setTypeface(Fonts.getTpfRegular(this));
-        signupAccountAvailibility = findViewById(R.id.signup_acount_availibility);
         signupAccountAvailibility.setTypeface(Fonts.getTpfRegular(this));
         signupLoginLink = findViewById(R.id.signup_login_link);
         signupLoginLink.setTypeface(Fonts.getTpfRegular(this));

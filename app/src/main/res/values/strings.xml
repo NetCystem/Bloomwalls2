@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Bloomwalls</string>
-    <string name="already_have_an_account">Already have an account?</string>
+    <string name="acount_availibility">Already have an account? %1$s</string>
+    <string name="login_link">Login</string>
     <string name="create_account">Create Account</string>
     <string name="err_msg_phone">Enter valid phone number</string>
     <string name="err_msg_email">Enter valid email address</string>
@@ -8,7 +9,6 @@
     <string name="hint_email">Email</string>
     <string name="hint_phone_number">Phone number</string>
     <string name="hint_password">Password</string>
-    <string name="login">Login</string>
     <string name="country">Country</string>
     <string name="last_name">Last name</string>
     <string name="first_name">First name</string>
@@ -21,6 +21,18 @@
     <string name="next">Next</string>
     <string name="email">Email</string>
     <string name="sms">SMS</string>
+    <string name="back">Back</string>
+    <string name="direct">Direct</string>
+    <string name="_1_to_1">1 to 1</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore</string>
+    <string name="selected_type">Selected type is not to be</string>
+    <string name="skip">Skip</string>
+    <string name="account_type">Account type</string>
+    <string name="selected_type_is_not_to_be_changed">Selected type is not to be changed</string>
+    <string name="hire">Hire</string>
+    <string name="work">Work</string>
+    <string name="sign_up_to_work">Sign up to work</string>
+
 
     <string-array name="gmt_array">
         <item>Mercury</item>
@@ -32,6 +44,7 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+
 
 
 </resources>

@@ -5,4 +5,5 @@
     <color name="bloomWhite">#FFFFFEFE</color>
     <color name="bloomBackground">#001C2B</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#b3010101</color>
 </resources>
