@@ -175,7 +175,7 @@
         android:layout_below="@+id/code_input"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:background="@drawable/button_style3"
+        android:background="@drawable/button_style_white"
         android:text="@string/next"
         android:textSize="17.3sp"
         android:lineSpacingExtra="-1.872sp"

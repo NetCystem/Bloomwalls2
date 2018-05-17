@@ -67,7 +67,7 @@
         android:layout_marginBottom="73.9dp"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:background="@drawable/button_style"
+        android:background="@drawable/button_style_pink"
         android:text="@string/create_account"
         android:textSize="17.3sp"
         android:textAllCaps="false"
