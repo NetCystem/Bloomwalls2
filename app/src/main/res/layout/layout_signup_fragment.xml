@@ -3,122 +3,99 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bloomWhite">
 
     <ImageButton
         android:layout_width="12.5dp"
-        android:layout_height="22dp"
+        android:layout_height="21.6dp"
         android:src="@drawable/back"
         android:background="@color/bloomWhite"
-        android:id="@+id/back_btn3"
-        android:layout_marginStart="9dp"
-        android:layout_marginTop="9dp"
+        android:id="@+id/signup_back_btn"
+        android:layout_marginStart="10.5dp"
+        android:layout_marginTop="30.24dp"
         android:scaleType="fitCenter"/>
 
     <TextView
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/signup_to_work"
-        android:layout_below="@+id/back_btn3"
-        android:layout_marginTop="14dp"
-        android:layout_marginStart="30dp"
-        android:text="Sign up to work"
+        android:layout_marginStart="28.3dp"
+        android:layout_marginTop="65.232dp"
+        android:text="@string/sign_up_to_work"
         android:textColor="@color/bloomBackground"
-        android:textSize="25sp"/>
+        android:textSize="24sp"/>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="320dp"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:id="@+id/signup_email"
-        android:layout_below="@+id/signup_to_work"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="110.448dp"
         android:layout_centerHorizontal="true"
         android:theme="@style/HintText"
         >
-
         <android.support.design.widget.TextInputEditText
             android:id="@+id/signup_input_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_email"
-            android:inputType="textEmailAddress"
-            android:textSize="15sp"
-            android:textCursorDrawable="@color/colorBlack"/>
-
-
+            android:hint="@string/hint_email"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="320dp"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:id="@+id/signup_phone_number"
-        android:layout_below="@+id/signup_email"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/signup_email"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:theme="@style/HintText"
         >
-
         <android.support.design.widget.TextInputEditText
             android:id="@+id/signup_input_phone_number"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_phone_number"
-            android:textSize="15sp"
-            android:textCursorDrawable="@color/colorBlack"
-            android:inputType="phone"/>
-
-
+            android:hint="@string/hint_phone_number"/>
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
-        android:layout_width="320dp"
+        android:layout_width="315dp"
         android:layout_height="wrap_content"
         android:id="@+id/signup_password"
-        android:layout_below="@+id/signup_phone_number"
-        android:layout_marginTop="10dp"
+        android:layout_below="@id/signup_phone_number"
+        android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
         android:theme="@style/HintText"
         >
-
         <android.support.design.widget.TextInputEditText
             android:id="@+id/signup_input_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/hint_password"
-            android:inputType="textPassword"
-            android:textSize="15sp"
-            android:textCursorDrawable="@color/colorBlack" />
-
-
+            android:hint="@string/hint_password" />
     </android.support.design.widget.TextInputLayout>
 
     <Button
         android:layout_width="315dp"
         android:layout_height="50dp"
         android:id="@+id/signup_create_account_btn"
-        android:layout_below="@+id/signup_password"
+        android:layout_below="@id/signup_password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="28.8dp"
         android:text="@string/create_account"
         android:textColor="@color/colorBlack"
         android:textAllCaps="false"
         android:background="@drawable/button_style3"
-        android:textSize="18sp"
+        android:textSize="17.3sp"
         android:stateListAnimator="@null"/>
 
     <TextView
         android:layout_width="190dp"
         android:layout_height="28.5dp"
-        android:id="@+id/signup_terms_of_service"
-        android:layout_below="@id/signup_create_account_btn"
-        android:layout_marginTop="15dp"
+        android:id="@+id/signup_terms_of_service_link"
         android:layout_centerHorizontal="true"
+        android:layout_below="@id/signup_create_account_btn"
+        android:layout_marginTop="14.4dp"
         android:textColor="@color/colorBlack"
         android:textAlignment="center"
         android:textSize="12sp"/>
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -126,8 +103,10 @@
         android:id="@+id/signup_login_link"
         android:layout_alignParentBottom="true"
         android:textColor="@color/colorBlack"
-        android:textSize="12sp"
+        android:textSize="11.5sp"
         android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginBottom="43.2dp"
 
         />
 </RelativeLayout>

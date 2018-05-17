@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.add(R.id.main_activity, new CreateAccountFragment() );
+        transaction.add(R.id.main_frame, new CreateAccountFragment() );
         transaction.commit();
 
 

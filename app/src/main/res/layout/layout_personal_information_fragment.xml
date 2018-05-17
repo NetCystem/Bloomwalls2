@@ -138,7 +138,8 @@
         android:textColor="@color/colorBlack"
         android:textAllCaps="false"
         android:background="@drawable/button_style3"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:stateListAnimator="@null"/>
 
 
 </RelativeLayout>

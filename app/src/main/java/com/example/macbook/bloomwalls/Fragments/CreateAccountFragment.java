@@ -21,9 +21,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.macbook.bloomwalls.MainActivity;
 import com.example.macbook.bloomwalls.R;
 import com.example.macbook.bloomwalls.Utils.Fonts;
+
+import static android.graphics.Typeface.BOLD;
 
 
 /**
@@ -32,10 +33,10 @@ import com.example.macbook.bloomwalls.Utils.Fonts;
 public class CreateAccountFragment extends Fragment implements View.OnClickListener {
 
     private ImageView createAccountBloomwallsIcon;
-    private TextView createAccountTxt1;
-    private TextView createAccountTxt2;
-    private TextView createAccountTxt3;
+    private TextView createAccountTxt1, createAccountTxt2, createAccountLoginLink;
     private Button createAccountButton;
+    private String createAccountLoginString, createAccountLoginAllString;
+
 
 
     public CreateAccountFragment() {
@@ -46,13 +47,13 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.layout_create_account, container, false);
+        View view = inflater.inflate(R.layout.layout_create_account_fragment, container, false);
         final Context context = getActivity();
 
-        String loginLink = getString(R.string.login_link);
-        String allString = getString(R.string.acount_availibility, loginLink);
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(allString);
-        final StyleSpan bolding = new StyleSpan(android.graphics.Typeface.BOLD);
+        createAccountLoginString = getString(R.string.login_link);
+        createAccountLoginAllString = getString(R.string.acount_availibility, createAccountLoginString);
+        SpannableStringBuilder createAccountStringBuilder = new SpannableStringBuilder(createAccountLoginAllString);
+
 
 
 
@@ -61,11 +62,12 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
         createAccountTxt1.setTypeface(Fonts.getTpfRegular(context));
         createAccountTxt2 = view.findViewById(R.id.create_account_txt2);
         createAccountTxt2.setTypeface(Fonts.getTpfRegular(context));
-        createAccountTxt3 = view.findViewById(R.id.create_account_txt3);
+        createAccountLoginLink = view.findViewById(R.id.create_account_login_link);
         createAccountButton = view.findViewById(R.id.create_account_btn);
+        createAccountButton.setTypeface(Fonts.getTpfBold(context));
         createAccountButton.setOnClickListener(this);
 
-        ClickableSpan clickableSpan = new ClickableSpan() {
+        ClickableSpan createAccountClickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View widget) {
                 Toast.makeText(context, "Your toast message",
@@ -74,12 +76,12 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
             }
         };
 
-        spannableStringBuilder.setSpan(clickableSpan, 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.bloomWhite)), 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableStringBuilder.setSpan(bolding, 25, 30, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        createAccountTxt3.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);
-        createAccountTxt3.setTypeface(Fonts.getTpfRegular(context));
-        createAccountTxt3.setMovementMethod(LinkMovementMethod.getInstance());
+        createAccountStringBuilder.setSpan(createAccountClickableSpan, 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        createAccountStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.bloomWhite)), 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        createAccountStringBuilder.setSpan(new StyleSpan(BOLD), 25, 30, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        createAccountLoginLink.setText(createAccountStringBuilder, TextView.BufferType.SPANNABLE);
+        createAccountLoginLink.setTypeface(Fonts.getTpfRegular(context));
+        createAccountLoginLink.setMovementMethod(LinkMovementMethod.getInstance());
         return view;
     }
 
@@ -94,7 +96,7 @@ public class CreateAccountFragment extends Fragment implements View.OnClickListe
     public  void Transact(Fragment fragment) {
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.add(R.id.main_activity, fragment);
+        transaction.add(R.id.main_frame, fragment);
         transaction.commit();
     }
 }

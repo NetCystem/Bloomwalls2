@@ -12,10 +12,8 @@ import android.support.design.widget.TextInputLayout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.example.macbook.bloomwalls.R;
@@ -65,7 +63,7 @@ public class PersonalInformationFragment extends Fragment implements View.OnClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.layout_personal_information, container, false);
+        View view = inflater.inflate(R.layout.layout_personal_information_fragment, container, false);
 
         personalInformationtxt = view.findViewById(R.id.personal_information);
         backBtn4 = view.findViewById(R.id.back_btn4);
@@ -95,8 +93,8 @@ public class PersonalInformationFragment extends Fragment implements View.OnClic
     @Override
     public void onClick(View v) {
 
-        FragmentTransaction transaction3 = getFragmentManager().beginTransaction();
-        transaction3.replace(R.id.main_activity, new SignupFragment());
-        transaction3.commit();
+        FragmentTransaction transaction = getFragmentManager().beginTransaction();
+        transaction.replace(R.id.main_frame, new VerificationFragment());
+        transaction.commit();
     }
 }

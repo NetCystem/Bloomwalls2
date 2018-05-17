@@ -7,23 +7,23 @@
     android:id="@+id/verification_main">
 
     <ImageButton
-        android:id="@+id/back_btn5"
+        android:id="@+id/verification_back_btn"
         android:layout_width="12.5dp"
         android:layout_height="21.6dp"
-        android:layout_marginStart="8.64dp"
-        android:layout_marginTop="29.8dp"
+        android:layout_marginStart="10.5dp"
+        android:layout_marginTop="30.24dp"
         android:background="@color/bloomWhite"
         android:scaleType="fitCenter"
         android:src="@drawable/back" />
 
     <TextView
 
-        android:id="@+id/forgot_password"
+        android:id="@+id/verification_forgot_password_link"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="34.56dp"
         android:layout_marginEnd="20.6dp"
-        android:text="Forgot Password?"
+        android:text="@string/forgot_password"
         android:layout_alignParentEnd="true"
         android:textColor="@color/colorBlack"
         android:textSize="11.5sp"
@@ -31,28 +31,25 @@
         android:lineSpacingExtra="-1.44sp"/>
 
     <TextView
-
         android:id="@+id/verification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/back_btn5"
         android:layout_marginStart="28.3dp"
-        android:layout_marginTop="12.96dp"
+        android:layout_marginTop="65.232dp"
         android:text="@string/verification"
         android:textColor="@color/colorBlack"
         android:textSize="24sp"
         android:gravity="center_horizontal"/>
 
     <TextView
-
         android:id="@+id/code_input_method"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/verification"
         android:layout_marginStart="28.8dp"
-        android:layout_marginTop="11.5dp"
+        android:layout_marginTop="7.632dp"
         android:text="@string/choose_your_code_input_method"
-        android:textColor="#b3010101"
+        android:textColor="@color/colorGrey"
         android:textSize="14.4sp" />
 
     <LinearLayout
@@ -79,26 +76,35 @@
             app:cardElevation="4dp"
             >
 
-            <ImageView
-                android:id="@+id/email_pic"
-                android:layout_width="48dp"
-                android:layout_height="34.1dp"
-                android:src="@drawable/email"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20.2dp"
-                android:foreground="?android:attr/selectableItemBackground"
-                />
-
-            <TextView
-                android:id="@+id/email_txt"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/email"
-                android:textSize="17.3sp"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/colorBlack"
-                android:layout_marginStart="80dp"
-                />
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/verification_linear_1">
+
+                <ImageView
+                    android:id="@+id/email_pic"
+                    android:layout_width="48dp"
+                    android:layout_height="34.1dp"
+                    android:layout_marginEnd="14dp"
+                    android:src="@drawable/email"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    />
+
+                <TextView
+                    android:id="@+id/email_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/email"
+                    android:textSize="17.3sp"
+                    android:textColor="@color/colorBlack"
+                    />
+
+            </LinearLayout>
+
+
 
         </android.support.v7.widget.CardView>
 
@@ -114,27 +120,33 @@
             android:focusable="true"
             app:cardElevation="4dp">
 
-
-            <ImageView
-                android:id="@+id/sms_pic"
-                android:layout_width="31.3dp"
-                android:layout_height="48dp"
-                android:src="@drawable/sms"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="20.2dp"
-
-                />
-
-            <TextView
-                android:id="@+id/sms_txt"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/sms"
-                android:textSize="17.3sp"
-                android:layout_gravity="center_vertical"
-                android:textColor="@color/colorBlack"
-                android:layout_marginStart="80dp"
-                />
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/verification_linear_2">
+
+                <ImageView
+                    android:id="@+id/sms_pic"
+                    android:layout_width="31.3dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="14dp"
+                    android:src="@drawable/sms"
+                    />
+
+                <TextView
+                    android:id="@+id/sms_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/sms"
+                    android:textSize="17.3sp"
+                    android:textColor="@color/colorBlack"
+                    />
+
+            </LinearLayout>
+
         </android.support.v7.widget.CardView>
 
     </LinearLayout>
@@ -157,7 +169,7 @@
 
 
     <Button
-        android:id="@+id/button_next"
+        android:id="@+id/verification_button_next"
         android:layout_width="302.4dp"
         android:layout_height="48dp"
         android:layout_below="@+id/code_input"
@@ -172,14 +184,13 @@
         android:foreground="?android:attr/selectableItemBackground"/>
 
     <TextView
-        android:id="@+id/resend_code_link"
+        android:id="@+id/verification_resend_code_link"
         android:layout_width="163dp"
         android:layout_height="27.4dp"
-        android:layout_below="@id/button_next"
+        android:layout_below="@id/verification_button_next"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="19dp"
         android:gravity="center"
-        android:text="If you haven’t received the e-mail click Resend code"
         android:textColor="@color/colorBlack"
         android:textSize="11.49sp" />
 
@@ -191,8 +202,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="42.7dp"
         android:gravity="center"
-        android:text="Already have an account? Login"
         android:textColor="@color/colorBlack"
         android:textSize="11.5sp" />
+
 
 </RelativeLayout>

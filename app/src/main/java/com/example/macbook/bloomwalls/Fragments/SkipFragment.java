@@ -22,16 +22,18 @@ import android.widget.Toast;
 import com.example.macbook.bloomwalls.R;
 import com.example.macbook.bloomwalls.Utils.Fonts;
 
+import static android.graphics.Typeface.BOLD;
+
 /**
  * A simple {@link Fragment} subclass.
  */
 public class SkipFragment extends Fragment implements View.OnClickListener {
 
+    private Context context;
     private ImageView skipBloomwallsIcon;
-    private TextView skipTxt1;
-    private TextView skipTxt2;
-    private TextView skipTxt3;
+    private TextView skipTxt1, skipTxt2, skipLoginLink;
     private Button skipButton;
+    private String skipLoginString, skipLoginAllString;
 
 
     public SkipFragment() {
@@ -43,23 +45,23 @@ public class SkipFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.layout_skip_fragment, container, false);
-        final Context context = getActivity();
-
-        String loginLink = getString(R.string.login_link);
-        String allString = getString(R.string.acount_availibility, loginLink);
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(allString);
-        final StyleSpan bolding = new StyleSpan(android.graphics.Typeface.BOLD);
+        context = getActivity();
 
         skipBloomwallsIcon = view.findViewById(R.id.skip_bloomwalls_icon);
         skipTxt1 = view.findViewById(R.id.skip_txt1);
         skipTxt1.setTypeface(Fonts.getTpfRegular(context));
         skipTxt2 = view.findViewById(R.id.skip_txt2);
         skipTxt2.setTypeface(Fonts.getTpfRegular(context));
-        skipTxt3 = view.findViewById(R.id.skip_txt3);
+        skipLoginLink = view.findViewById(R.id.skip_login_link);
         skipButton = view.findViewById(R.id.skip_btn);
+        skipButton.setTypeface(Fonts.getTpfBold(context));
         skipButton.setOnClickListener(this);
+        skipLoginString = getString(R.string.login_link);
+        skipLoginAllString = getString(R.string.acount_availibility, skipLoginString);
 
-        ClickableSpan clickableSpan = new ClickableSpan() {
+        SpannableStringBuilder skipStringBuilder = new SpannableStringBuilder(skipLoginAllString);
+
+        ClickableSpan skipClickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View widget) {
                 Toast.makeText(context, "Your toast message",
@@ -68,12 +70,12 @@ public class SkipFragment extends Fragment implements View.OnClickListener {
             }
         };
 
-        spannableStringBuilder.setSpan(clickableSpan, 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.bloomWhite)), 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableStringBuilder.setSpan(bolding, 25, 30, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        skipTxt3.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);
-        skipTxt3.setTypeface(Fonts.getTpfRegular(context));
-        skipTxt3.setMovementMethod(LinkMovementMethod.getInstance());
+        skipStringBuilder.setSpan(skipClickableSpan, 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        skipStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.bloomWhite)), 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        skipStringBuilder.setSpan(new StyleSpan(BOLD), 25, 30, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        skipLoginLink.setText(skipStringBuilder, TextView.BufferType.SPANNABLE);
+        skipLoginLink.setTypeface(Fonts.getTpfRegular(context));
+        skipLoginLink.setMovementMethod(LinkMovementMethod.getInstance());
 
         return view;
     }
@@ -82,7 +84,7 @@ public class SkipFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_activity, new AccountTypeFragment());
+        transaction.replace(R.id.main_frame, new AccountTypeFragment());
         transaction.commit();
     }
 }

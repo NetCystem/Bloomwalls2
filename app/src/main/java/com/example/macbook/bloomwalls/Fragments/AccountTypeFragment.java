@@ -21,13 +21,16 @@ import android.widget.Toast;
 import com.example.macbook.bloomwalls.R;
 import com.example.macbook.bloomwalls.Utils.Fonts;
 
+import static android.graphics.Typeface.BOLD;
+
 /**
  * A simple {@link Fragment} subclass.
  */
-public class AccountTypeFragment extends Fragment implements View.OnClickListener{
-    Context context;
-    TextView accountTypeLoginTxtx;
-    CardView accountTypeHireCard;
+public class AccountTypeFragment extends Fragment implements View.OnClickListener {
+    private Context context;
+    private TextView accountTypeLoginLink, accountTypeTitle, accountTypeSubTitle, accountTypeHireTitle, accountTypeWorkTitle;
+    private CardView accountTypeHireCard;
+    private String accountTypeLoginString, accountTypeLoginAllString;
 
 
     public AccountTypeFragment() {
@@ -38,20 +41,27 @@ public class AccountTypeFragment extends Fragment implements View.OnClickListene
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.layout_account_type_fragment,container,false);
+        View view = inflater.inflate(R.layout.layout_account_type_fragment, container, false);
         context = getActivity();
 
+        accountTypeTitle = view.findViewById(R.id.account_type_title);
+        accountTypeTitle.setTypeface(Fonts.getTpfBold(context));
+        accountTypeSubTitle = view.findViewById(R.id.account_type_sub_title);
+        accountTypeSubTitle.setTypeface(Fonts.getTpfRegular(context));
+        accountTypeHireTitle = view.findViewById(R.id.account_type_hire_title);
+        accountTypeHireTitle.setTypeface(Fonts.getTpfBold(context));
+        accountTypeWorkTitle = view.findViewById(R.id.account_type_work_title);
+        accountTypeWorkTitle.setTypeface(Fonts.getTpfBold(context));
         accountTypeHireCard = view.findViewById(R.id.account_type_hire_card);
         accountTypeHireCard.setOnClickListener(this);
+        accountTypeLoginString = getString(R.string.login_link);
+        accountTypeLoginAllString = getString(R.string.acount_availibility, accountTypeLoginString);
+        accountTypeLoginLink = view.findViewById(R.id.acount_type_login_link);
 
-        String loginLink = getString(R.string.login_link);
-        String allString = getString(R.string.acount_availibility, loginLink);
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(allString);
-        final StyleSpan bolding = new StyleSpan(android.graphics.Typeface.BOLD);
+        SpannableStringBuilder accountTypeStringBuilder = new SpannableStringBuilder(accountTypeLoginAllString);
 
-        accountTypeLoginTxtx = view.findViewById(R.id.acount_type_login_txt);
 
-        ClickableSpan clickableSpan = new ClickableSpan() {
+        ClickableSpan accountTypeClickableSpan = new ClickableSpan() {
             @Override
             public void onClick(View widget) {
                 Toast.makeText(context, "Your toast message",
@@ -60,12 +70,11 @@ public class AccountTypeFragment extends Fragment implements View.OnClickListene
             }
         };
 
-        spannableStringBuilder.setSpan(clickableSpan, 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableStringBuilder.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.bloomWhite)), 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
-        spannableStringBuilder.setSpan(bolding, 25, 30, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
-        accountTypeLoginTxtx.setText(spannableStringBuilder, TextView.BufferType.SPANNABLE);
-        accountTypeLoginTxtx.setTypeface(Fonts.getTpfRegular(context));
-        accountTypeLoginTxtx.setMovementMethod(LinkMovementMethod.getInstance());
+        accountTypeStringBuilder.setSpan(accountTypeClickableSpan, 25, 30, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        accountTypeStringBuilder.setSpan(new StyleSpan(BOLD), 25, 30, Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+        accountTypeLoginLink.setText(accountTypeStringBuilder, TextView.BufferType.SPANNABLE);
+        accountTypeLoginLink.setTypeface(Fonts.getTpfRegular(context));
+        accountTypeLoginLink.setMovementMethod(LinkMovementMethod.getInstance());
 
         return view;
     }
@@ -74,7 +83,7 @@ public class AccountTypeFragment extends Fragment implements View.OnClickListene
     public void onClick(View v) {
 
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_activity, new SignupFragment());
+        transaction.replace(R.id.main_frame, new SignupFragment());
         transaction.commit();
     }
 }

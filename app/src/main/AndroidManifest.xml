@@ -17,8 +17,6 @@
                 <data android:scheme="login" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activities.SignupActivity" />
-        <activity android:name=".Activities.VerificationActivity"/>
     </application>
 
 </manifest>

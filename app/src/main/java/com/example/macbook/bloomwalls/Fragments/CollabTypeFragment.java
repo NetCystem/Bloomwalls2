@@ -63,7 +63,7 @@ public class CollabTypeFragment extends Fragment implements View.OnClickListener
     @Override
     public void onClick(View v) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_activity, new SkipFragment());
+        transaction.replace(R.id.main_frame, new SkipFragment());
         transaction.commit();
     }
 }

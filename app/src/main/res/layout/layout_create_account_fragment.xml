@@ -69,15 +69,18 @@
         android:gravity="center"
         android:background="@drawable/button_style"
         android:text="@string/create_account"
+        android:textSize="17.3sp"
         android:textAllCaps="false"
-        android:textColor="@color/bloomWhite" />
+        android:textColor="@color/bloomWhite"
+        android:stateListAnimator="@null"/>
 
 
         <TextView
-            android:id="@+id/create_account_txt3"
+            android:id="@+id/create_account_login_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/bloomWhite"
+            android:textSize="11.5sp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="43.2dp"
             android:layout_centerHorizontal="true"
