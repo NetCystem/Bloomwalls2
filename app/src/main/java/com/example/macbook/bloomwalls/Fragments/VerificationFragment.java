@@ -113,7 +113,7 @@ public class VerificationFragment extends Fragment implements View.OnClickListen
     @Override
     public void onClick(View v) {
         FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.main_frame, new CreateAccountFragment());
+        transaction.replace(R.id.main_frame, new ConfirmationFragment());
         transaction.commit();
     }
 }

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/bloomWhite"
+    android:id="@+id/confirmation_main">
+
+    <ImageButton
+        android:id="@+id/confirmation_back_btn"
+        android:layout_width="12.5dp"
+        android:layout_height="21.6dp"
+        android:layout_marginStart="10.5dp"
+        android:layout_marginTop="30.24dp"
+        android:background="@color/bloomWhite"
+        android:scaleType="fitCenter"
+        android:src="@drawable/back" />
+
+
+
+    <TextView
+        android:id="@+id/confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28.3dp"
+        android:layout_marginTop="65.232dp"
+        android:text="@string/confirmation"
+        android:textColor="@color/colorBlack"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"/>
+
+    <TextView
+        android:id="@+id/confirmation_code_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/confirmation"
+        android:layout_marginStart="28.8dp"
+        android:layout_marginTop="7.632dp"
+        android:text="@string/check_your_email_and_enter_the_code"
+        android:textColor="@color/colorGrey"
+        android:textSize="14.4sp" />
+
+
+
+    <EditText
+        android:id="@+id/confirmation_code_input"
+        android:layout_width="302.4dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/confirmation_code_check"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
+        android:hint="@string/code"
+        android:inputType="number"
+        android:textSize="14.4sp"
+        android:textCursorDrawable="@null"
+        android:backgroundTint="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textColorHighlight="@color/colorBlack"
+        />
+
+
+    <Button
+        android:id="@+id/confirmation_button_finish"
+        android:layout_width="302.4dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/confirmation_code_input"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_style_white"
+        android:text="@string/finish"
+        android:textSize="17.3sp"
+        android:lineSpacingExtra="-1.872sp"
+        android:textAllCaps="false"
+        android:stateListAnimator="@null"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+    <TextView
+        android:id="@+id/confirmation_resend_code_link"
+        android:layout_width="163dp"
+        android:layout_height="27.4dp"
+        android:layout_below="@id/confirmation_button_finish"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="11.49sp" />
+
+    <TextView
+        android:id="@+id/confirmation_login_link"
+        android:layout_width="168dp"
+        android:layout_height="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="42.7dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="11.5sp" />
+
+
+</RelativeLayout>

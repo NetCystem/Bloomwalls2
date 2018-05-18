@@ -35,6 +35,16 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="terms_of_service">By clicking \'\'Create Account\'\' I agree to BloomWalls Terms of Service</string>
     <string name="sign_up_to_work">Sign up to work</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="check_your_email_and_enter_the_code">Check your email and enter the code</string>
+    <string name="reset_password">Reset password</string>
+    <string name="new_password">New password</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="submit">Submit</string>
+    <string name="login_to_bloomwalls">Login to BloomWalls</string>
+    <string name="email_or_phone_number">Email or phone number</string>
+    <string name="get_started">Get Started</string>
+    <string name="not_a_member_yet_sign_up">Not a member yet? Sign up</string>
 
 
     <string-array name="gmt_array">
@@ -47,6 +57,5 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
-
 
 </resources>
